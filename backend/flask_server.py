@@ -94,12 +94,12 @@ def handle_data():
         method = data.get('method')
         print()
         #
-        full_text = f"{subjectLine} {emailContent}"
-        print(method)
+        full_text = emailContent
+        print("-==========================================",method)
 
         
         # Load the Random Forest model from the pickle file
-        model_path = './Models/Random_Forest_feature_selection_No.pickle'  # Make sure the path is correct
+        model_path = './Models/SVM.pickle'  # Make sure the path is correct
         with open(model_path, 'rb') as file:
             model = pickle.load(file)
 
@@ -107,11 +107,19 @@ def handle_data():
 
 
         email_vector=conv(full_text, col)
+        
         email_df = pd.DataFrame([email_vector], columns=col[:-1])
-        scaler = StandardScaler()
-        email_scaled = scaler.fit_transform(email_df)
+        # To load the scaler
+        with open('./Models/scaler.pickle', 'rb') as f:
+             scaler = pickle.load(f)
+       
+
+        
+        email_scaled = scaler.transform(email_df)
+        print("-----",email_scaled)
         prediction = model.predict(email_scaled)
         prediction_prob = model.predict_proba(email_scaled) 
+        print(prediction_prob )
 
         if prediction==1:
             output='Spam with probability '+ str(prediction_prob[0][1])
