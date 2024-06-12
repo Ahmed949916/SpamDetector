@@ -5,9 +5,7 @@ import "./SpamDetect.css";
 const SpamDetect = () => {
   const [emailContent, setEmailContent] = useState("");
   const [subjectLine, setSubjectLine] = useState("");
-  const [classificationMethod, setClassificationMethod] = useState(
-    "Logistic Regression"
-  );
+  const [classificationMethod, setClassificationMethod] = useState("LR");
   const [classificationResult, setClassificationResult] = useState("");
   const [error, setError] = useState("");
 
@@ -31,7 +29,7 @@ const SpamDetect = () => {
     }
     setClassificationResult("");
     setError("");
-
+    console.log(classificationMethod);
     try {
       const response = await axios.post(`http://127.0.0.1:5000/api`, {
         subjectLine,
