@@ -1,23 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import SpamDetector from './SpamDetect';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import SpamDetector from "./pages/SpamDetect";
+import "./App.css";
 
 function App() {
   return (
     <Router>
       <div>
-        <nav style={{ backgroundColor: '#0d1117', padding: 20 }}>
-          <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'space-around' }}>
-            <li style={{ color: 'white' }}>
-              <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+        <nav>
+          <ul className="nav-list">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
             </li>
-            <li>
-              <Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">
+                About
+              </Link>
             </li>
-            <li>
-              <Link to="/spam-detector" style={{ textDecoration: 'none', color: 'white' }}>Spam Detector</Link>
+            <li className="nav-item">
+              <Link to="/spam-detector" className="nav-link">
+                Spam Detector
+              </Link>
             </li>
           </ul>
         </nav>

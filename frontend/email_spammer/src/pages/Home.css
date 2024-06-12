@@ -1,0 +1,30 @@
+.container {
+  text-align: center;
+  padding: 50px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  margin-bottom: 50px;
+  font-size: 5.5rem;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  background-color: #102c57;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 3rem;
+  }
+}

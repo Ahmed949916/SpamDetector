@@ -1,0 +1,57 @@
+.spam-container {
+  text-align: center;
+  color: #0d1117;
+  padding: 0 5%;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+}
+
+.select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: grey;
+  cursor: pointer;
+  background-color: #0d1117;
+  color: white;
+}
+
+.input {
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #0d1117;
+  color: white;
+}
+
+.textarea {
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #0d1117;
+  color: white;
+}
+
+.button {
+  margin-top: 50px;
+  color: white;
+  background-color: #102c57;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+p {
+  color: white;
+}
