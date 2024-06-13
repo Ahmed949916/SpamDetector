@@ -57,7 +57,8 @@ const SpamDetect = () => {
           <option value="LR">Logistic Regression</option>
           <option value="DT">Decision Tree</option>
           <option value="RF">Random Forest</option>
-          <option value="SVM">SVM</option>
+
+          
           <option value="NN">Neural Network</option>
         </select>
       </div>
