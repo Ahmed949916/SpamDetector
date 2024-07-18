@@ -31,6 +31,8 @@ A web application that allows users to upload the content of an email. The appli
 
 ## Installation and Setup
 
+First download zip folder for this project:
+
 1. **Download and Install Anaconda:**
    - Download Anaconda from the [official website](https://www.anaconda.com/products/distribution).
 
